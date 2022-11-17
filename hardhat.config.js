@@ -10,10 +10,14 @@ module.exports = {
     },
     // *Test Networks doesnot work properly, sometimes getting setTimeout, sometime insufficient*//
     // Alternatively using other RPC providers like Alchemy, Infura, etc.
-    // mumbai: {
-    //   url: "https://rpc-mumbai.matic.today",
-    //   accounts: [process.env.PRIVATE_KEY],
-    // },
+    mumbai: {
+      url: "https://matic-mumbai.chainstacklabs.com",
+      accounts: [process.env.PRIVATE_KEY],
+    },
+    mainnet: {
+      url: "https://rpc-mainnet.matic.network",
+      accounts: [process.env.PRIVATE_KEY],
+    },
   },
   etherscan: {
     apiKey: process.env.API_KEY_POLYGONSCAN,

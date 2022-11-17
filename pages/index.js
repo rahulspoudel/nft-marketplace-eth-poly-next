@@ -19,7 +19,10 @@ export default function Home() {
   }, []);
 
   async function loadNFTs() {
-    const provider = new ethers.providers.JsonRpcProvider();
+    const provider = new ethers.providers.JsonRpcProvider(
+      "https://matic-mumbai.chainstacklabs.com" // For Mumbai Testnet
+      // https://rpc-mainnet.matic.network - For mainnet
+    );
     const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider);
     const marketContract = new ethers.Contract(
       nftmarketaddress,
